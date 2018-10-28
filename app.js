@@ -16,10 +16,12 @@ var items = [
     }
 ]
 
-var vm = new Vue({
-    el: '#app',
-    data: {
-        items: items
+var vm = new Vue(
+    {
+        el: "#b-button",
+        data: {
+            loggedInButton: 'ログイン済みのため購入できます'
+        }
     }
-})
+)
 window.vm = vm
