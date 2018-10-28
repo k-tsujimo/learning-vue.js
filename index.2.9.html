@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8"/>
     <script src="https://unpkg.com/vue@2.5.17"></script>
+    <title>Vue Stationery store</title>
 </head>
 <body>
     <div id="app">
@@ -11,6 +12,7 @@
                 {{ item.name }}の個数： <input type="number" v-model="item.quantity" min="0">
             </li>
         </ul>
+        <hr>
     <!-- 1000円以上になるまで、赤く表示する -->
         <div :style="errorMessageStyle">
             <ul>
@@ -26,6 +28,7 @@
             <p v-show="!canBuy">
                 {{ 1000 | numberWithDelimiter }}円以上からご購入いただけます
             </p>
+            <button v-bind:disabled="!canBuy" v-on:click="doBuy">購入</button>
         </div>
     </div>
     <script src="app.js"></script>
