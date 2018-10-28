@@ -2,7 +2,7 @@ var items = [
     {
         name: '鉛筆',
         price: 300,
-        quantity: 0
+        quantity: 15
     },
     {
         name: 'notebook',
@@ -18,9 +18,9 @@ var items = [
 
 var vm = new Vue(
     {
-        el: "#b-button",
+        el: "#app",
         data: {
-            canBuy: false
+            items: items
         }
     }
 )
