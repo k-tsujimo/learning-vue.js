@@ -9,6 +9,7 @@
 <button id="b-button" v-bind:disabled="!canBuy">購入</button>
 <div id="app">
     <p>{{ items[0].name }}: {{ items[0].price * items[0].quantity }}</p>    
+    <p>フィルタ処理例 {{1000 | numberWithDelimiter}}</p>
 </div>
 
 <script src="app.js"></script>
